@@ -1,0 +1,31 @@
+package $(Package);
+
+import massive.munit.Assert;
+
+/**
+$(CBI)* ...
+$(CBI)* @author $(DefaultUser)
+$(CBI)*/
+class $(FileName) $(CSLB){
+	
+	@Test
+	public function $(EntryPoint)testExample():Void $(CSLB){
+	}
+	
+	@BeforeClass
+	public function beforeClass():Void $(CSLB){
+	}
+	
+	@AfterClass
+	public function afterClass():Void $(CSLB){
+	}
+	
+	@Before
+	public function setup():Void $(CSLB){
+	}
+	
+	@After
+	public function tearDown():Void $(CSLB){
+	}
+	
+}
