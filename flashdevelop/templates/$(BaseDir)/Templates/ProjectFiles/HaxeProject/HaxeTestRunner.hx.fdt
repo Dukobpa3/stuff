@@ -3,7 +3,6 @@ package $(Package);
 import haxe.unit.TestRunner;
 
 /**
-$(CBI)* ...
 $(CBI)* @author $(DefaultUser)
 $(CBI)*/
 class $(FileName) $(CSLB){
@@ -12,11 +11,11 @@ class $(FileName) $(CSLB){
 		$(EntryPoint)
 	}
 	
-	static function main(){
+	static function main() $(CSLB){
         var r = new TestRunner();
         // r.add(new TestFoo());
         // your can add others TestCase here
-
+		
         // finally, run the tests
         r.run();
     }
