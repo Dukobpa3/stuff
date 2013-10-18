@@ -1,16 +1,15 @@
-init(can't captured because need user input):
-cd root
-RunProcess|$(BaseDir)/tools/munit/munit.bat;config
+init(can't captured because need user input)
+Инициализирует дефолтные настройки munit для проекта (все платформы):
+RunProcess|cmd.exe;/c cd $(ProjectDir) & haxelib run munit config
 
-run all tests:
-cd root
-RunProcessCaptured|$(BaseDir)/tools/munit/munit.bat;test -browser flashdevelop
+run all tests
+Запускает все тесты проекта:
+RunProcessCaptured|$(SystemDir)\cmd.exe;/c cd $(ProjectDir) & haxelib run munit test -browser flashdevelop
 
-add testCase:
-cd root
-RunProcessCaptured|$(BaseDir)/tools/munit/munit.bat;create -for $(TypPkgName)
+add testCase
+Добавить тест-кейс для текущего класса(открытого в редакторе):
+RunProcessCaptured|$(SystemDir)\cmd.exe;/c cd $(ProjectDir) & haxelib run munit create -for $(TypPkgName)
 
-run TestCase:
-cd root
-RunProcessCaptured|$(BaseDir)/tools/munit/munit.bat;gen -filter $(TypPkgName)
-RunProcessCaptured|$(BaseDir)/tools/munit/munit.bat;test -browser flashdevelop
+run TestCase
+Запустить текущий тест(должен быть открытв редакторе):
+RunProcessCaptured|$(SystemDir)\cmd.exe;/c cd $(ProjectDir) & haxelib run munit gen -filter $(TypPkgName) & munit test -browser flashdevelop
