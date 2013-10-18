@@ -1,15 +1,15 @@
-init(can't captured because need user input)
+init munit for current project(can't captured because need user input)
 Инициализирует дефолтные настройки munit для проекта (все платформы):
 RunProcess|cmd.exe;/c cd $(ProjectDir) & haxelib run munit config
 
-run all tests
+run all tests for current project
 Запускает все тесты проекта:
 RunProcessCaptured|$(SystemDir)\cmd.exe;/c cd $(ProjectDir) & haxelib run munit test -browser flashdevelop
 
-add testCase
+add testCase for current opened file (type)
 Добавить тест-кейс для текущего класса(открытого в редакторе):
 RunProcessCaptured|$(SystemDir)\cmd.exe;/c cd $(ProjectDir) & haxelib run munit create -for $(TypPkgName)
 
-run TestCase
+run current opened TestCase 
 Запустить текущий тест(должен быть открытв редакторе):
 RunProcessCaptured|$(SystemDir)\cmd.exe;/c cd $(ProjectDir) & haxelib run munit gen -filter $(TypPkgName) & munit test -browser flashdevelop
