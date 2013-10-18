@@ -3,7 +3,6 @@ package $(Package);
 import massive.munit.Assert;
 
 /**
-$(CBI)* ...
 $(CBI)* @author $(DefaultUser)
 $(CBI)*/
 class $(FileName) $(CSLB){
