@@ -1,0 +1,9 @@
+﻿@AsyncTest
+public function $(EntryPoint)(factory:AsyncFactory):Void $(CSLB){
+	var handler:Dynamic = factory.createHandler(this, onTestAsyncExampleComplete, 300);
+	timer = Timer.delay(handler, 200);
+}
+
+private function onTestAsyncExampleComplete():Void $(CSLB){
+	Assert.isFalse(false);
+}

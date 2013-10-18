@@ -1,0 +1,16 @@
+init(can't captured because need user input):
+cd root
+RunProcess|$(BaseDir)/tools/munit/munit.bat;config
+
+run all tests:
+cd root
+RunProcessCaptured|$(BaseDir)/tools/munit/munit.bat;test -browser flashdevelop
+
+add testCase:
+cd root
+RunProcessCaptured|$(BaseDir)/tools/munit/munit.bat;create -for $(TypPkgName)
+
+run TestCase:
+cd root
+RunProcessCaptured|$(BaseDir)/tools/munit/munit.bat;gen -filter $(TypPkgName)
+RunProcessCaptured|$(BaseDir)/tools/munit/munit.bat;test -browser flashdevelop

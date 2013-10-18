@@ -1,0 +1,4 @@
+﻿@Test
+public function $(EntryPoint)():Void $(CSLB){
+	Assert.isTrue(true);
+}
